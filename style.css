@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+
+@import url('./fonts/style.css');
 :root{
-  --color:#6C5CE7;
+  --color:#B0E40E;
+  --colorr:#000000;
+  --colorrr:#B0E40E;
+  --color2:rgb(255, 255, 255);
+  --silver:#cccccc;
 }
 
+/* colors used */
+/* #00FEFC */
+/* B0E40E */
+
 *{
-  font-family: 'Poppins', sans-serif;
+  font-family: "PF Handbook Pro Regular";
   margin:0; padding:0;
   box-sizing: border-box;
   text-transform: capitalize;
@@ -26,10 +36,11 @@ body{
   padding-top: 6rem;
   display: inline-block;
   font-size: 3.5rem;
+  font-family: "PF Handbook Pro Bold";
 
-  background: linear-gradient(to right,var(--color),rgb(0, 221, 255));
+  background: linear-gradient(to right,var(--colorrr),var(--colorrr));
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip : text;
   color:var(--color);
   position: relative;
   letter-spacing: .2rem;
@@ -58,7 +69,7 @@ body{
   border: none;
   border-radius: 5rem;
   background: var(--color);
-  color:#fff;
+  color:#000000;
   cursor: pointer;
   height:3.5rem;
   width: 15rem;
@@ -101,6 +112,7 @@ body{
 
 .header .logo i{
   padding:0 .5rem;
+  color: #B0E40E;
 }
 
 .header .logo span{
@@ -145,7 +157,7 @@ body{
 .home{
   min-height: 100vh;
   width: 100vw;
-  background:linear-gradient( var(--color),rgb(0, 221, 255));
+  background:linear-gradient( var(--colorr),var(--colorr));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,15 +169,18 @@ body{
 }
 
 .home .banner{
-  color:#fff;
-  font-size: 5rem;
-  font-family: 'Clicker Script', cursive;
+  color:#B0E40E;
+  font-size: 6rem;
+  /* font-family: 'Clicker Script', cursive; */
+  font-family: "PF Handbook Pro Bold";
   text-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
 }
 
 .home .slogan{
-  color:#eee;
+  color:#CCCCCC;
   font-size: 2.5rem;
+  margin: 2rem;
+  font-family: "PF Handbook Pro Bold";
   
   font-weight: 400;
 }
@@ -173,15 +188,22 @@ body{
 .home button{
   height: 4rem;
   width: 18rem;
-  background:#fff;
+  background:#B0E40E;
+  margin:2px;
+  
   color: #444;
   cursor: pointer;
-  border:none;
-  outline: none;
-  margin-top: 1rem;
+  /* border:none;
+  outline: none; */
+  /* margin-top: 1rem; */
   font-size: 2rem;
   font-weight: 400;
   box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+
+.home a{
+  
+  border: 2px solid #B0E40E;
 }
 
 .home button:hover{
@@ -194,7 +216,7 @@ body{
   left: 0;
   height:11rem;
   width: 100%;
-  background: url(wave.png);
+  background: url(wave\ -\ Copy.png);
   background-size: 100rem 11rem;
   background-repeat: repeat-x;
   animation:waves 10s linear infinite;
@@ -222,8 +244,10 @@ body{
 .home .fa-cog{
   position: absolute;
   font-size: 30rem;
-  opacity: .15;
+  opacity: .30;
   color:#fff;
+  border: 0px solid #B0E40E;
+  border-radius: 100%;
   animation: rotate 10s linear infinite;
 }
 
@@ -242,12 +266,16 @@ body{
   }
 }
 
+
+/* about section starts here
+ */
 .about{
   min-height: 100vh;
   width: 100vw;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background:linear-gradient( var(--colorr),var(--colorr));
 }
 
 .about .row{
@@ -271,8 +299,8 @@ body{
 }
 
 .about .row .content p{
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 1.8rem;
+  color: var(--silver);
   padding:1rem 0;
 }
 
@@ -298,9 +326,40 @@ body{
   top:-10rem; right:-10rem;
 }
 
+.about .wave{
+  position: absolute;
+  bottom: -.5rem;
+  left: 0;
+  height:11rem;
+  width: 100%;
+  background: url(wave.png);
+  background-size: 100rem 11rem;
+  background-repeat: repeat-x;
+  animation:waves 10s linear infinite;
+}
+
+.about .wave2{
+  animation-direction: reverse;
+  opacity: .2;
+}
+
+.about .wave3{
+  animation-duration: 4s;
+  opacity: .5;
+}
+
+
+
+
+
+/* about section ends here */
+
+
+/* services section starts here */
 .service{
   width: 100vw;
   text-align: center;
+  background:linear-gradient( var(--colorr),var(--colorr));
 }
 
 .service .row{
@@ -327,8 +386,8 @@ body{
 }
 
 .service .row .content p{
-  font-size: 1.5rem;
-  color:#333;
+  font-size: 1.8rem;
+  color:var(--silver);
   padding:1rem 0;
 }
 
